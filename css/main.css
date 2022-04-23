@@ -1,18 +1,76 @@
+/*General */
 *{
     margin: 0;
     padding: 0;
-    font-family: "montserrat",sans-serif;
+    font-family: "Ubuntu",sans-serif;
+    box-sizing: border-box;
   }
-  
-  body{
+html{
+    scroll-behavior: smooth;
+    }
+/*Header*/
+.navbar{
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    padding: 30px 0;
+    top: 0;
+    z-index: 999;
+    transition: .3s linear;
+    }
+.inner-width{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+    }
+.navbar .inner-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+.logo{
+    width: 250px;
+    height: 55px;
+    /*background-image:;*/
+    background-size: contain;
+    }
+.menu-toggler{
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 999;
+    display: none;
+    }
+.menu-toggler span{
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    position: relative;
+    transition: .3s linear;
+    }
+.navbar-menu a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: .2s linear;
+    }
+.navbar-menu a:hover{
+    color: #45f500 !important;
+    }
+/*Body*/
+body{
     height: 100vh;
     background: linear-gradient(0deg,rgba(110, 26, 26, 0.842) 50%, rgb(37, 36, 36) 0%);
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  .floating-text{
+.floating-text{
     text-transform: uppercase;
     font-size: 120px;
     font-weight: 900;
@@ -22,8 +80,7 @@
     animation: fl1 3s infinite linear;
     background-color: #00000005;
   }
-  
-  .floating-text::before{
+.floating-text::before{
     content: attr(data-text);
     font-weight: 2000;
     position: absolute;
@@ -31,7 +88,6 @@
     background-color: #00000005;
     animation: fl2 3s infinite linear;
   }
-  
   @keyframes fl1 {
     30%{
       transform: translateY(1%) rotate(0.5deg);
@@ -40,7 +96,6 @@
       transform: translateY(1%) rotate(-0.3deg);
     }
   }
-  
   @keyframes fl2 {
     30%{
     clip-path: polygon(0 0,100% 0,100% 4%,0 6%);
