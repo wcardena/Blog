@@ -49,3 +49,22 @@
     clip-path: polygon(0 0,100% 0,100% 6%,0 4%);
     }
   }
+/*Footer*/
+footer{
+  color: rgb(255, 255, 255);
+  padding: 80px 0;
+  text-align: center;
+  background-color: #111010;
+}
+
+.copyright{
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+.copyright a{
+  font-size: 16px;
+  color: #ca5143ee;
+  font-weight: 500;
+}
